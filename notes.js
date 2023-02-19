@@ -18,7 +18,7 @@ for(num in myArray){
 }
 
 // <-------------------------windows.confirm------------------------->
-var answer = window.confirm('001, teri bhen ko naman');
+var answer = window.confirm('Choose one of the buttons');
 
 if (answer ===true){
   console.log('you clicked OK')
@@ -29,7 +29,7 @@ if (answer ===true){
 
 // <-------------------------Switch conditional------------------------->
 //example 1
-var answer = window.prompt('write yes, no or yeet');
+var answer = window.prompt('write YES, NO or YEET');
 
 switch(answer){
   case 'YES':
@@ -39,7 +39,7 @@ switch(answer){
     console.log('you entered no!');
     break;
   default:
-    console.log('you entered something else! you rat');
+    console.log('you entered something else! you sport!');
     break;
 }
 
@@ -81,7 +81,7 @@ if (cryAboutIt){
 
 if (!cryAboutIt){
   console.log('the childern are happy!')
-}
+}else //viceversa
 
 // <------------------------TERNARY OPERATORS---------------------------->
 var photo = 'hotdog';
@@ -196,3 +196,37 @@ console.log(addingMachine(1,2,4,5,6));
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
+//more random quesitons...
+var calvin = {
+  username: 'varun dhand',
+  age : 19,
+  type : 'non-veg'
+};
+
+
+function transmognifier(calvin){
+  if (typeof calvin!== 'object'){
+    console.error('wrong data type!');
+    return;
+  }
+  //random number between 1-5
+  var randNumber = Math.floor(Math.random() * 5) + 1;
+  // var newForm = calvin.type; // could add this to the code to get a copy of the object
+
+  switch(randNumber){
+    case 1:
+      calvin.type ='veg';
+      break;
+    case 2:
+      calvin.type ='pescatarian';
+      break;
+    case 3:
+      calvin.type ='eggetarian';
+      break;
+  }
+}
+
+transmognifier(calvin);
+
+console.log(calvin);

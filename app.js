@@ -1,5 +1,11 @@
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
+var pages = {
+  first: 'Home',
+  second: 'About Us',
+  third: 'Contact Us',
+  fourth: 'JavaScript Playground',
+  fifth: 'Blog',
+};
 
-console.log(getRndInteger(1,10))
+for(var i=0;i < pages.length; i++){
+  if( pages[i]===)
+}
