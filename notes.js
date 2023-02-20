@@ -18,8 +18,8 @@ for(num in myArray){
 }
 
 // <-------------------------windows.confirm------------------------->
-var answer = window.confirm('Choose one of the buttons');
-
+var answer = window.confirm('Choose one of the buttons'); //global Window object and confirm is a global variable which is a property of the window object 
+//basically window is a global object and has many functions in it.
 if (answer ===true){
   console.log('you clicked OK')
 }else{
@@ -230,3 +230,57 @@ function transmognifier(calvin){
 transmognifier(calvin);
 
 console.log(calvin);
+
+
+//<------------------------Truthy and falsy values---------------------------->
+function speakSomething(what){    // '',0,NaN,false and null: they all give falsy values
+  var what = what || 'something is off!';  // so code after the || i.e. Or Operator, is executed.
+  return what;
+}
+
+console.log(speakSomething(''));
+
+
+//<------------------------Scoping in JavaScript---------------------------->
+var myNum = 32;
+var myResult = 'Success!';
+
+function randomizier(limit){
+  var randNumber= Math.floor((Math.random())*limit);
+  var myNum = randNumber; // we used var so that the scope is maintained and a new variable is made...if var wasnt used the global varibale would have been re assigned a new value
+  // myNum = randNumber -----> gloabl variable is reset
+  console.log('MyNum is ' + myNum);
+  console.log('Global MyNum is ' + window.myNum); // we can access the global varibale using window's property/global namesplace
+
+  console.log('Our result is ' + myResult);
+
+  return myNum;
+}
+
+console.log(randomizier(10));
+
+
+//<------------------------Map function---------------------------->
+const persons = [
+  {firstname : "Malcom", lastname: "Reynolds"},
+  {firstname : "Kaylee", lastname: "Frye"},
+  {firstname : "Jayne", lastname: "Cobb"}
+];
+
+var fullName = persons.map(myFunc); //map calls the function for each element of the array // myfunc is my CALL BACK FUNCTION
+
+function myFunc(item){
+  return [item.firstname,item.lastname].join(' ');
+}
+console.log(fullName);
+
+//<------------------------forEach function---------------------------->
+const numbers = [1,2,3,4,5];
+
+numbers.forEach(doubleIt); // foreach function doesnt make a new array but does all the iteration to the original array
+
+function doubleIt(item,index,arr){
+  arr[index] = item*2
+}
+
+console.log(numbers);

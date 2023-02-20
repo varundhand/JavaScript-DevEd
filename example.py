@@ -1,5 +1,5 @@
 languages = {}
-languages[1.1] = "Yeet"
-languages[2.0] = "lol"
-languages[2] = "lmao"
+languages[1.1] = "python"
+languages[2.0] = "javascript"
+languages[2] = "ruby"
 print(languages)
