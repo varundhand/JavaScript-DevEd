@@ -36,8 +36,25 @@
   cursor: pointer;
   background: #0ff30f;
 } */
-.change{
-  color: lightblue;
-  font-size: 20px;
-  border: 5px solid red;
+*{
+  margin: 0;
+}
+div{
+  display: flex;
+  margin: .5rem;
+  padding: 1rem;
+  border: 3px solid black;
+  min-height: 1rem;
+  flex-grow: 1;
+
+}
+.grandparent{
+  background-color: red;
+  flex-direction: column;
+}
+.parent{
+  background-color: aquamarine;
+}
+.child{
+  background-color: greenyellow;
 }
